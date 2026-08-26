@@ -1,0 +1,7 @@
+# ninja log v5
+1	11157	1786188302103371608	CMakeFiles/edge-opt.dir/lib/WorkloadAnalysisPass.cpp.o	426d41d8c9873a3c
+2	11783	1786188302731073106	CMakeFiles/edge-opt.dir/lib/edge-opt-main.cpp.o	b58960f878d1ef90
+11783	13908	1786188304839371545	edge-opt	4373e7c5acc0c329
+233	9191	1786446050676831192	CMakeFiles/edge-opt.dir/lib/WorkloadAnalysisPass.cpp.o	426d41d8c9873a3c
+233	9610	1786446051096831217	CMakeFiles/edge-opt.dir/lib/edge-opt-main.cpp.o	b58960f878d1ef90
+9610	14378	1786446055852831499	edge-opt	4373e7c5acc0c329

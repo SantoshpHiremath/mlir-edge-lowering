@@ -1,0 +1,13 @@
+Hand-computed expected output of `edge-opt --edge-workload-analysis` on
+mlir/mlp_forward.mlir, used by tests/test_workload_analysis_pass.py to
+verify the custom pass's output, not just that it runs without crashing.
+
+Layer 1 matmul: (1x4) @ (4x6) -> M=1, K=4, N=6 -> MACs = 1*4*6 = 24
+Layer 1 generic (bias+relu): touches mm1(1x6=6) + b1(1x6=6) + init1(1x6=6) = 18 elements
+Layer 2 matmul: (1x6) @ (6x3) -> M=1, K=6, N=3 -> MACs = 1*6*3 = 18
+Layer 2 generic (bias-add): touches mm2(1x3=3) + b2(1x3=3) + init2(1x3=3) = 9 elements
+
+Total matmul ops: 2
+Total generic (elementwise) ops: 2
+Total estimated MACs: 42
+Total elementwise-op element count: 27
