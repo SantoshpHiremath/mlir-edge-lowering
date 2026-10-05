@@ -11,9 +11,8 @@
 #     -> LLVM dialect
 #     -> mlir-cpu-runner JIT-executes the LLVM dialect module directly
 #
-# This is a real MLIR 18 toolchain (matching NXP's stated MLIR
-# interest) doing real work — every flag below is load-bearing; none
-# of this is a mock or a print statement pretending to be a compiler.
+# This is the real MLIR 18 toolchain doing real work — every flag below
+# is load-bearing.
 # Prints the network's 3 output values, which tests/test_mlp_reference.py
 # checks against an independent NumPy computation of the same network.
 set -euo pipefail

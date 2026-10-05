@@ -25,7 +25,7 @@ void registerWorkloadAnalysisPass();
 // Registering everything requires linking every dialect library in the
 // distro's split-lib packaging, which pulls in unrelated targets
 // (TOSA pipelines, GPU/SPIR-V, etc.) this tool has no use for — scoping
-// down to what's needed keeps the build honest about what edge-opt
+// down to what's needed keeps the build focused on what edge-opt
 // actually supports.
 int main(int argc, char **argv) {
   mlir::registerWorkloadAnalysisPass();

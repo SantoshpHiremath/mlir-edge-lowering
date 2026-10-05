@@ -87,8 +87,8 @@ def _run_pipeline_and_get_output():
     """Actually runs the shell script that lowers and executes the
     real MLIR program via mlir-cpu-runner, and parses its stdout.
     Skips (not fails) if the MLIR toolchain isn't available in the
-    current environment, so this test suite can still run elsewhere,
-    but in this project's actual sandbox it runs for real."""
+    current environment, so this test suite can still run elsewhere;
+    where the toolchain is installed it runs for real."""
     script = PROJECT_ROOT / "run_pipeline.sh"
     if not script.exists():
         pytest.skip("run_pipeline.sh not found")

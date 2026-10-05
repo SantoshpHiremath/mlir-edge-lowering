@@ -3,8 +3,8 @@
 // higher-level framework. This is the same IR level (linalg-on-tensor)
 // that a real ML-compiler frontend (e.g. torch-mlir) would lower a
 // PyTorch model down to before target-specific optimization; writing
-// it by hand here is an honest, deliberately scoped-down entry point
-// into that space, not a claim of having built a frontend.
+// it by hand here keeps the project a focused entry point into that
+// space, with no frontend involved.
 //
 // Network: input (1x4) -> Linear(4,6) -> ReLU -> Linear(6,3) -> output (1x3)
 //   layer1_out = relu(x @ W1 + b1)
